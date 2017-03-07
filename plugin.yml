@@ -1,0 +1,20 @@
+name: ABCTickets
+main: me.abcric.bukkit.abctickets.ABCTickets
+version: 1
+author: ABCRic
+depend: [Vault, WorldGuard]
+commands:
+   abctickets:
+      description: This is the global plugin command.
+      usage: /abctickets <command>
+      aliases: [abct]
+permissions:
+    ABCTickets.booth.use:
+        description: Allows the user to buy tickets from booths
+    ABCTickets.booth.create:
+        description: Allows the user to create booths
+    # TODO
+    ABCTickets.booth.create.others:
+        description: Allows the user to create booths with others as owners
+    ABCTickets.free:
+        description: Allows the user to use vehicles without tickets

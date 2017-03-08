@@ -67,7 +67,7 @@ public class ABCTicketsListener implements Listener {
 				required_tickets.addAll(plugin.RequiredTickets.get(region));
 		}
 
-		if (required_tickets == null || required_tickets.isEmpty())
+		if (required_tickets.isEmpty())
 			return;
 
 		List<String> used_tickets = new ArrayList<>();

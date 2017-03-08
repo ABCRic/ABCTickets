@@ -93,8 +93,12 @@ public class ABCTicketsListener implements Listener {
 				}
 				plugin.tickets.put(player, l);
 			}
-			String message = "You used ticket(s) to ride the vehicle.";
-			player.sendMessage(message);
+			if(used_tickets.size() == 1) {
+				player.sendMessage("You used a " + used_tickets.get(0) + " ticket to ride the vehicle.");
+			} else {
+				String message = "You used tickets " + String.join(",", used_tickets) + " to ride the vehicle.";
+				player.sendMessage(message);
+			}
 		} else {
 			event.setCancelled(true);
 			String message = "You need the following ticket(s) to ride here: ";

@@ -184,7 +184,7 @@ public class ABCTicketsListener implements Listener {
 
 			EconomyResponse r2 = ABCTickets.eco.depositPlayer(owner_name, ticket_price);
 			if(!r2.transactionSuccess()) {
-				plugin.getLogger().severe("Owner.deposit for " + owner_name + " failed");
+				plugin.getLogger().severe("Failed to deposit ticket money to account " + owner_name);
 			}
 
 
@@ -201,7 +201,7 @@ public class ABCTicketsListener implements Listener {
 			if(owner != null) owner.sendMessage(ChatColor.DARK_GREEN + "[Tickets] " + buyer.getDisplayName() + " has bought a '" + ticket + "' ticket from you for " + ABCTickets.eco.format(ticket_price) + ".");
 			plugin.getLogger().info(buyer.getDisplayName() + " has bought a '" + ticket + "' ticket from " + owner_name + " for " + ABCTickets.eco.format(ticket_price) + ".");
 		} else {
-			buyer.sendMessage(ChatColor.RED + "You don't have enough money to buy that ticket!");
+			buyer.sendMessage(ChatColor.RED + "You don't have enough money to buy this ticket.");
 		}
 	}
 

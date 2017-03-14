@@ -11,6 +11,7 @@ commands:
 permissions:
     ABCTickets.booth.use:
         description: Allows the user to buy tickets from booths
+        default: true
     ABCTickets.booth.create:
         description: Allows the user to create booths
     # TODO
